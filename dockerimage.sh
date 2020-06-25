@@ -1,4 +1,4 @@
 #!/bin/bash
 
-image = `echo $DOCKER_TRIGGER_REPO_NAME | awk -F'/' '{print $2}'`
-echo building $image
+echo $DOCKER_TRIGGER_REPO_NAME
+name=`echo $DOCKER_TRIGGER_REPO_NAME`
