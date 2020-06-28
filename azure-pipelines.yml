@@ -1,16 +1,16 @@
 stages:
 - stage: stage1
   displayName: Stage1
-  pool:
-   vmImage: 'ubuntu-16.04'
+#  pool:
+#   vmImage: 'ubuntu-16.04'
   jobs:
   - job: job1
     steps:
     - bash: echo "this is first stage"
 - stage: stage2
   displayName: stage2
-  pool:
-   vmImage: 'ubuntu-16.04'
+#  pool:
+#   vmImage: 'ubuntu-16.04'
   jobs:
   - job: job2
     steps:
