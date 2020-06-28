@@ -8,10 +8,19 @@ stages:
     steps:
     - bash: echo "this is first stage"
 - stage: stage2
-  displayName: checking 2nd stage
+  displayName: stage2
   pool:
    vmImage: 'ubuntu-16.04'
   jobs:
   - job: job2
     steps:
     - bash: echo "this 2nd stage"
+- stage: stage3
+  displayName: check condition
+  pool:
+   vmImage: 'ubuntu-16.04'
+  jobs:
+  - job: job3
+    steps:
+      - bash: echo "stage 1 is running and stage 2 is failed"
+  condition: and(succeeded('stage1'), failed('stage2'))
