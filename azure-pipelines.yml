@@ -1,6 +1,6 @@
 stages:
 - stage: stage1
-    displayName: checking output 
+    displayName: "checking output"
     pool:
     vmImage: 'ubuntu-16.04'
   jobs:
@@ -8,7 +8,7 @@ stages:
     steps:
     - bash: echo "this is first stage"
 - stage: stage2
-    displayName: checking  2nd stage
+    displayName: "checking 2nd stage"
     pool:
     vmImage: 'ubuntu-16.04'
   jobs:
